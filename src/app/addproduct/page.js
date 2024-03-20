@@ -31,7 +31,7 @@ const AddProduct = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="p-2 flex flex-col gap-2">
             <label className="text-sm">Title</label>
             <input
                 type="text"
@@ -59,7 +59,7 @@ const AddProduct = () => {
                 onChange={handleInputChange}
             />
 
-            <button type="submit">Add Product</button>
+            <button className="bg-red-500 text-white p-2 rounded" type="submit">Add Product</button>
         </form>
     );
 };

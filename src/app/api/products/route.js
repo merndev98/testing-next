@@ -9,11 +9,7 @@ export async function GET() {
         const data = await Product.find({});
         return new NextResponse(JSON.stringify(data), {
             status: 200,
-            headers: {
-                "Cache-Control": "max-age=10",
-                "CDN-Cache-Control": "max-age=10",
-                "Vercel-CDN-Cache-Control": "max-age=10"
-            }
+          
         });
     } catch (error) {
         console.log(error);

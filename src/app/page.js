@@ -34,7 +34,7 @@ const Home = () => {
             ) : (
                 <div className="container mx-auto p-2">
                     {products.map(product => (
-                        <div key={product.id}>
+                        <div key={product._id}>
                             <div>title: {product.title}</div>
                             <div>description: {product.description}</div>
                             <div>price: {product.price}</div>

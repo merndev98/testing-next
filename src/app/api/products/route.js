@@ -25,10 +25,10 @@ export async function GET() {
 }
 
 export async function POST(req) {
-  const data = await req.formData();
-  const title = await data.get("title");
-  const description = await data.get("description");
-  const price = await data.get("price");
+    const data = await req.formData();
+    const title = await data.get("title");
+    const description = await data.get("description");
+    const price = await data.get("price");
     try {
         await Product.create({
             title: title,
@@ -36,12 +36,13 @@ export async function POST(req) {
             price: price
         });
 
-        return new NextResponse.json({ success: true }, { status: 200 });
+   return new NextResponse(JSON.stringify({ success: true }), { status: 200 });
     } catch (error) {
         console.log(error);
         return new NextResponse(
-            JSON.stringify({ message: "Something went wrong!" }),
+            JSON.stringify({ err: "Internal Server Error" }),
             { status: 500 }
         );
     }
+
 }

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState, useEffect } from "react";
 
@@ -33,9 +33,22 @@ const Home = () => {
                 <div className="container mx-auto p-2">
                     {products.map(product => (
                         <div key={product._id}>
-                            <div>title: {product.title}</div>
-                            <div>description: {product.description}</div>
-                            <div>price: {product.price}</div>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>Title:</td>
+                                        <td>{product.title}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Description:</td>
+                                        <td>{product.description}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Price:</td>
+                                        <td>{product.price}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     ))}
                 </div>

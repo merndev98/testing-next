@@ -30,27 +30,35 @@ const Home = () => {
             {loading ? (
                 <div className="h-40">Loading...</div>
             ) : (
-                <div className="container mx-auto p-2">
-                    {products.map(product => (
-                        <div key={product._id}>
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td>Title:</td>
-                                        <td>{product.title}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Description:</td>
-                                        <td>{product.description}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Price:</td>
-                                        <td>{product.price}</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    ))}
+                <div className="p-2 overflow-auto">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Serial ID</th>
+                                <th>Title</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                                <th>hdjhsjhsj</th>
+                                <th>anshdjce</th>
+                                <th>Pjejej</th>
+                                <th>Pjekekeece</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {products.map(item => (
+                                <tr>
+                                    <td>{item._id}</td>
+                                    <td>{item.title}</td>
+                                    <td>{item.description}</td>
+                                    <td>{item.price}</td>
+                                    <td>akhdj</td>
+                                    <td>jksjsks</td>
+                                    <td>hjebejee</td>
+                                    <td>ghehjehe</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
                 </div>
             )}
         </>
